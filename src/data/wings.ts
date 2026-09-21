@@ -1,0 +1,120 @@
+import type { WingData } from "../types/community";
+
+// Diagram units, not surveyed metres. -Z is the top of the supplied photograph.
+// `floors` counts residential floors; the ground storey is rendered separately.
+const defaults = { rotation: 0, heightPerFloor: 2.35, groundHeight: 3.2 };
+
+export const wings: readonly WingData[] = [
+  {
+    ...defaults,
+    id: "60",
+    position: [-44, 0, -72],
+    width: 21,
+    depth: 33,
+    floors: 14,
+    facade: "#c5c8bb",
+  },
+  {
+    ...defaults,
+    id: "61",
+    position: [-44, 0, -36],
+    width: 21,
+    depth: 33,
+    floors: 14,
+    facade: "#cfc6b8",
+  },
+  {
+    ...defaults,
+    id: "62",
+    position: [-44, 0, 0],
+    width: 21,
+    depth: 33,
+    floors: 14,
+    facade: "#c5c8bb",
+  },
+  {
+    ...defaults,
+    id: "63",
+    position: [-44, 0, 36],
+    width: 21,
+    depth: 33,
+    floors: 14,
+    facade: "#cfc6b8",
+  },
+  {
+    ...defaults,
+    id: "64",
+    position: [-44, 0, 72],
+    width: 21,
+    depth: 33,
+    floors: 14,
+    facade: "#c5c8bb",
+  },
+  {
+    ...defaults,
+    id: "65",
+    position: [0, 0, 75],
+    width: 21,
+    depth: 27,
+    floors: 14,
+    facade: "#cfc6b8",
+  },
+  {
+    ...defaults,
+    id: "66",
+    position: [0, 0, 45],
+    width: 21,
+    depth: 27,
+    floors: 14,
+    facade: "#c5c8bb",
+  },
+  {
+    ...defaults,
+    id: "67",
+    position: [0, 0, 15],
+    width: 21,
+    depth: 27,
+    floors: 11,
+    facade: "#cfc6b8",
+  },
+  {
+    ...defaults,
+    id: "68",
+    position: [0, 0, -15],
+    width: 21,
+    depth: 27,
+    floors: 11,
+    facade: "#c5c8bb",
+  },
+  {
+    ...defaults,
+    id: "69",
+    position: [0, 0, -45],
+    width: 21,
+    depth: 27,
+    floors: 14,
+    facade: "#cfc6b8",
+  },
+  {
+    ...defaults,
+    id: "70",
+    position: [0, 0, -75],
+    width: 21,
+    depth: 27,
+    floors: 14,
+    facade: "#c5c8bb",
+  },
+  {
+    ...defaults,
+    id: "71",
+    position: [44, 0, 48],
+    rotation: -0.035,
+    width: 21,
+    depth: 30,
+    floors: 13,
+    facade: "#c5c8bb",
+  },
+];
+
+export const wingHeight = (wing: WingData) =>
+  wing.groundHeight + wing.floors * wing.heightPerFloor;
